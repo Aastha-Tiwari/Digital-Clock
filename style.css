@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Orbitron', sans-serif;
+    color:#fff;
+    background-color: #201e1e;
+}
+
+
+/* Utility Class */
+.flex-center{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+/* Main Styling */
+body{
+    width:100vw;
+    height:100vh;
+}
+.container{
+    width:80%;
+    margin : auto;
+}
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    word-spacing: 20px;
+    padding-block: 15vh;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+.clock{
+    /* background-color: cornflowerblue;
+    margin-inline:10px;
+    font-size: 5rem;
+    padding:2rem 1.5rem;
+    border-radius:10px;
+    width:19%; */
+    /*  */
+    background: #111;
+    border: 2px solid #33ccff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 3em;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-inline:5px;
+}
+
+
+/* Animation for heading */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #33ccff, 0 0 10px #33ccff, 0 0 15px #33ccff, 0 0 20px #3399ff, 0 0 25px #3399ff;
+    }
+    50% {
+        text-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff, 0 0 30px #3399ff, 0 0 40px #3399ff, 0 0 50px #3399ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #33ccff, 0 0 10px #33ccff, 0 0 15px #33ccff, 0 0 20px #3399ff, 0 0 25px #3399ff;
+    }
+}
+
+
+/* Media Queries for making the page responsive */
+@media screen and (max-width:1000px){
+    .container{
+        width:98%;
+    }
+    .clock{
+        font-size: 3.4rem;
+    }
+}
+@media screen and (max-width:640px){
+    .clock{
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 1.6rem;
+    }
+    .clock{
+        margin-inline:4px;
+        width:22%;
+    }
+}
+
